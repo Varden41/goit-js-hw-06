@@ -7,6 +7,9 @@ const { input, buttonCreate, buttonDestroy, boxDiv } = {
   buttonDestroy: document.querySelector("button[data-destroy]"),
   boxDiv: document.getElementById("boxes"),
 };
+buttonCreate.addEventListener("click", () => createBoxes(Number(input.value)));
+
+buttonDestroy.addEventListener("click", destroyBoxes);
 
 function createBoxes(amount) {
   for (let i = 1; i <= amount; i += 1) {
@@ -17,9 +20,7 @@ function createBoxes(amount) {
     boxDiv.append(div);
   }
 }
-buttonCreate.addEventListener("click", () => createBoxes(Number(input.value)));
 
 function destroyBoxes() {
   boxDiv.innerHTML = "";
 }
-buttonDestroy.addEventListener("click", destroyBoxes);
