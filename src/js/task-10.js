@@ -13,11 +13,11 @@ buttonDestroy.addEventListener("click", destroyBoxes);
 
 function createBoxes(amount) {
   for (let i = 1; i <= amount; i += 1) {
-    const div = document.createElement("div");
-    div.style.width = 30 + i * 10 + "px";
-    div.style.height = 30 + i * 10 + "px";
-    div.style.backgroundColor = getRandomHexColor();
-    boxDiv.append(div);
+    const box = document.createElement("div");
+    box.style.width = 30 + i * 10 + "px";
+    box.style.height = 30 + i * 10 + "px";
+    box.style.backgroundColor = getRandomHexColor();
+    boxDiv.append(box);
   }
 }
 
