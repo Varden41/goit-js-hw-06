@@ -10,6 +10,7 @@ const { currentColor, colorBody, colorButton } = {
 colorButton.addEventListener("click", colorChanger);
 
 function colorChanger(event) {
-  return (colorBody.style.backgroundColor = currentColor.textContent =
-    getRandomHexColor());
+  const colorPicker = getRandomHexColor();
+  colorBody.style.backgroundColor = colorPicker;
+  currentColor.textContent = colorPicker;
 }
