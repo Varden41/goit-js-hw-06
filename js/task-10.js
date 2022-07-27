@@ -10,9 +10,8 @@ const { input, buttonCreate, buttonDestroy, boxDiv } = {
 buttonCreate.addEventListener("click", () => createBoxes(Number(input.value)));
 
 buttonDestroy.addEventListener("click", destroyBoxes);
-
+const boxMassive = [];
 function createBoxes(amount) {
-  const boxMassive = [];
   for (let i = 1; i <= amount; i += 1) {
     const box = document.createElement("div");
     const doMath = 30 + i * 10 + "px";
